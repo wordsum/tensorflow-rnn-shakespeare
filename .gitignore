@@ -1,4 +1,7 @@
 __pycache__
 log
 checkpoints
+bin
+lib
+pip-selfcheck.json
 *.zip

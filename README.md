@@ -7,6 +7,25 @@ The presentation itself is available here:
 
 This sample has now been updated for Tensorflow 1.1. Please make sure you redownload the checkpoint files if you use rnn_play.py.
 
+## Local Setup with Python3 and virtualenv:
+
+1. git clone <source>
+
+2. cd <source>
+
+3. (if pip and virtualenv not installed) sudo apt-get install python3-pip python3-dev python-virtualenv
+
+4. virtualenv --system-site-packages -p python3 .
+
+5. source ./bin/activate
+
+6. pip3 install --upgrade tensorflow 
+
+7. python tensor_install_test.py
+
+8. wait for Tensorflow to say 'Hi'. If it doesn't then something is wrong.
+
+
 ## Usage:
 
 ```
