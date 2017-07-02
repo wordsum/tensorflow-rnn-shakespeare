@@ -35,7 +35,7 @@ tf.set_random_seed(0)
 #         You can now play with the parameters anf follow the effects in Tensorboard
 #         A good choice of parameters ensures that the testing and validation curves stay close
 #         To see the curves drift apart ("overfitting") try to use an insufficient amount of
-#         training data (shakedir = "shakespeare/t*.txt" for example)
+#         training data (stories_dir = "shakespeare/t*.txt" for example)
 #
 SEQLEN = 30
 BATCHSIZE = 200
@@ -45,10 +45,11 @@ NLAYERS = 3
 learning_rate = 0.001  # fixed learning rate
 dropout_pkeep = 0.8    # some dropout
 
-# load data, either shakespeare, or the Python source of Tensorflow itself
-shakedir = "shakespeare/*.txt"
-#shakedir = "../tensorflow/**/*.py"
-codetext, valitext, bookranges = txt.read_data_files(shakedir, validation=True)
+# load the stories to train and validate an author.
+stories_dir = "oster/*"
+
+
+codetext, valitext, bookranges = txt.read_data_files(stories_dir, validation=True)
 
 # display some stats on the data
 epoch_size = len(codetext) // (BATCHSIZE * SEQLEN)
