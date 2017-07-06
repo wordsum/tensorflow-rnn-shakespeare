@@ -13,9 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Python code to code and encode text, so it can be used to train a machine
+# and create a story model.
+#
+# This is used by both rnn_train.py and rnn_story.py.
+#
+# rnn_train.py uses my_textutils.py to encode text to train and validate a story
+# model.
+#
+# rnn_story.py uses my_textutils.py to numericize alphabet
+
 import numpy as np
 import glob
 import sys
+
+
 
 # size of the alphabet that we work with
 ALPHASIZE = 98

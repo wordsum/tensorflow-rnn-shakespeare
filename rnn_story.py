@@ -37,6 +37,7 @@ ncnt = 0
 with tf.Session() as sess:
     new_saver = tf.train.import_meta_graph('checkpoints/rnn_train_1495455686-0.meta')
     new_saver.restore(sess, author)
+    # This is used in conjunction with the ord value 'K' set in rnn_train.py
     x = my_txtutils.convert_from_alphabet(ord("L"))
     x = np.array([[x]])  # shape [BATCHSIZE, SEQLEN] with BATCHSIZE=1 and SEQLEN=1
 

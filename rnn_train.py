@@ -169,6 +169,8 @@ for x, y_, epoch in txt.rnn_minibatch_sequencer(codetext, BATCHSIZE, SEQLEN, nb_
     # display a short text generated with the current weights and biases (every 150 batches)
     if step // 3 % _50_BATCHES == 0:
         txt.print_text_generation_header()
+        # Set the ry to ordinal of K because when we generate a story from the trained model
+        # the ordinal value is 'L' and we want to train this to predict the next letter.
         ry = np.array([[txt.convert_from_alphabet(ord("K"))]])
         rh = np.zeros([1, INTERNALSIZE * NLAYERS])
         for k in range(1000):
