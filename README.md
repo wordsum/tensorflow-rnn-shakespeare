@@ -7,7 +7,7 @@ The presentation itself is available here:
 
 This sample has now been updated for Tensorflow 1.1. Please make sure you redownload the checkpoint files if you use rnn_play.py.
 
-## Local Setup with Python3 and virtualenv:
+## Local Setup on Ubuntu with Python3 and virtualenv:
 
 1. git clone <source>
 
@@ -19,7 +19,7 @@ This sample has now been updated for Tensorflow 1.1. Please make sure you redown
 
 5. source ./bin/activate
 
-6. pip3 install --upgrade tensorflow 
+6. pip3 install --upgrade tensorflow
 
 7. python tensor_install_test.py
 
@@ -34,7 +34,7 @@ This sample has now been updated for Tensorflow 1.1. Please make sure you redown
 The script **rnn_train.py** trains a language model on the complete works of William Shakespeare.
 You can also train on Tensorflow Python code. See comments in the file.
 
-The file **rnn_train_stateistuple.py** implements the same model using 
+The file **rnn_train_stateistuple.py** implements the same model using
 the state_is_tuple=True option in tf.nn.rnn_cell.MultiRNNCell (default).
 Training is supposedly faster (by ~10%) but handling the state as
 a tuple is a bit more cumbersome.
@@ -47,20 +47,20 @@ data as "Tensorboard sumaries" in the "log" folder. They can be visualised with 
 In the screenshot below, you can see the RNN being trained on 6 epochs of Shakespeare.
 The training and valisation curves stay close together which means that overfitting is not a major issue here.
  You can try to add some dropout (pkeep=0.8 for example) but it will not improve the situation much becasue it is already quite good.
- 
+
 ![Image](https://martin-gorner.github.io/tensorflow-rnn-shakespeare/tensorboard_screenshot.png)
 ```
 > python3 rnn_play.py
-``` 
-   
+```
+
 The script **rnn_play.py** uses a trained checkpoint to generate a new "Shakespeare" play.  
 You can also generate new "Tensorflow Python" code. See comments in the file.
 
 Checkpoint files can be downloaded from here:  
-   
+
 [Fully trained](https://drive.google.com/file/d/0B5njS_LX6IsDc2lWTmtyanRpOHc/view?usp=sharing)
 on Shakespeare or Tensorflow Python source.   
-   
+
 [Partially trained](https://drive.google.com/file/d/0B5njS_LX6IsDUlFsMkdhclNSazA/view?usp=sharing)
 to see how they make progress in training.
 
@@ -68,7 +68,7 @@ to see how they make progress in training.
 > python3 -m unittest tests.py
 ```
 Unit tests can be run with the command above.
- 
+
 ## FAQ
 
 ### 1) Why not apply a softmax activation function to the outputs of the LSTM directly?
@@ -163,25 +163,25 @@ Good mathematical hunting!﻿
 
 
 ACT I
- 
+
 SCENE III	An ante-chamber. The COUNT's palace.
- 
+
 [Enter CLEOMENES, with the Lord SAY]
- 
+
 Chamberlain
     Let me see your worshing in my hands.
- 
+
 LUCETTA
     I am a sign of me, and sorrow sounds it.
- 
+
 [Enter CAPULET and LADY MACBETH]
- 
+
 What manner of mine is mad, and soon arise?
- 
+
 JULIA
     What shall by these things were a secret fool,
     That still shall see me with the best and force?
- 
+
 Second Watchman
     Ay, but we see them not at home: the strong and fair of thee,
     The seasons are as safe as the time will be a soul,
@@ -191,18 +191,18 @@ Second Watchman
     What says the story, well say we have said to thee,
     That shall she not, though that the way of hearts,
     We have seen his service that we may be sad.
- 
+
 [Retains his house]
 ADRIANA What says my lord the Duke of Burgons of Tyre?
- 
+
 DOMITIUS ENOBARBUS
     But, sir, you shall have such a sweet air from the state,
     There is not so much as you see the store,
     As if the base should be so foul as you.
- 
+
 DOMITIUS ENOY
     If I do now, if you were not to seek to say,
     That you may be a soldier's father for the field.
- 
+
 [Exit]
  ```

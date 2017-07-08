@@ -20,7 +20,10 @@ import os
 import time
 import math
 import numpy as np
-import my_txtutils as txt
+import txtutils as txt
+
+# set to initilize some psuedorandom state.
+# Read for some more detail https://en.wikipedia.org/wiki/Random_seed
 tf.set_random_seed(0)
 
 # model parameters
@@ -37,10 +40,16 @@ tf.set_random_seed(0)
 #         To see the curves drift apart ("overfitting") try to use an insufficient amount of
 #         training data (stories_dir = "shakespeare/t*.txt" for example)
 #
+
+# Set the sequece length (Link to begin to defined https://danijar.com/variable-sequence-lengths-in-tensorflow/)
 SEQLEN = 30
+# The subset of the training data to be processed through the rnn at one time.
 BATCHSIZE = 200
+# The expect size of the text.
 ALPHASIZE = txt.ALPHASIZE
+# Don't understand enough to make some attempt to define.
 INTERNALSIZE = 512
+# Number of network layers.
 NLAYERS = 3
 learning_rate = 0.001  # fixed learning rate
 dropout_pkeep = 0.8    # some dropout
@@ -49,6 +58,7 @@ dropout_pkeep = 0.8    # some dropout
 stories_dir = "oster/*"
 
 
+# Read the the text files. Each text files is assumed to be a book.
 codetext, valitext, bookranges = txt.read_data_files(stories_dir, validation=True)
 
 # display some stats on the data

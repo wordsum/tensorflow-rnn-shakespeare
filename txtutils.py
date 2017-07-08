@@ -21,6 +21,8 @@
 # rnn_train.py uses my_textutils.py to encode text to train and validate a story
 # model.
 #
+#
+#
 # rnn_story.py uses my_textutils.py to numericize alphabet
 
 import numpy as np
