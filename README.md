@@ -7,6 +7,32 @@ The presentation itself is available here:
 
 This sample has now been updated for Tensorflow 1.1. Please make sure you redownload the checkpoint files if you use rnn_play.py.
 
+## Local Setup on MacOS with Python3 and virtualenv:
+
+1. git clone <source>
+
+2. cd <source>
+
+3. (if not installed) sudo easy_install pip
+
+4. (if virtualenv not installed) sudo pip install --upgrade virtualenv
+
+5. (if brew and python3 not installed) ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+6. (if python3 not installed) brew install python3
+
+7. virtualenv --system-site-packages -p python3 .
+
+8. source ./bin/activate
+
+9. pip3 install --upgrade tensorflow
+
+10. python tensor_install_test.py
+
+11. wait for Tensorflow to say 'Hi'. If it doesn't then something is wrong.
+
+
+
 ## Local Setup on Ubuntu with Python3 and virtualenv:
 
 1. git clone <source>
