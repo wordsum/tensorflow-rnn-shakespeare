@@ -1,4 +1,10 @@
+# Directories
 __pycache__
 log
 checkpoints
+bin
+lib
+oster
+# Files
+pip-selfcheck.json
 *.zip
