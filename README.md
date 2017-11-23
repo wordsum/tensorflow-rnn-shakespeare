@@ -1,5 +1,12 @@
+# wordsum-model-syntax
 
-## Local Setup on MacOS with Python3 and virtualenv:
+wordsum-model-syntax is wordsum's modified Shakespeare algorithm by Martin Gorner to train a model of a book's syntax. 
+
+This will allow wordsum to parse text into wordsum's text model. 
+
+This is a work in progress like all of wordsum.
+
+## Local Setup on MacOS with Python3 and virtualenv (it works on one machine):
 
 1. git clone <source>
 
@@ -19,13 +26,13 @@
 
 9. pip3 install --upgrade tensorflow
 
-10. python tensor_install_test.py
+10. python test/utils/tensor_install_test.py
 
 11. wait for Tensorflow to say 'Hi'. If it doesn't then something is wrong.
 
 
 
-## Local Setup on Ubuntu with Python3 and virtualenv:
+## Local Setup on Ubuntu with Python3 and virtualenv (it works on one machine):
 
 1. git clone <source>
 
@@ -39,17 +46,8 @@
 
 6. pip3 install --upgrade tensorflow
 
-7. python tensor_install_test.py
+7. python test/utils/tensor_install_test.py
 
 8. wait for Tensorflow to say 'Hi'. If it doesn't then something is wrong.
 
 
-## Usage:
-
-```
-> python3 rnn_train.py
-```
-
-```
-> tensorboard --logdir=log
-```
