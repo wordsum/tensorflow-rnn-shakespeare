@@ -59,7 +59,7 @@ learning_rate = 0.001  # fixed learning rate
 dropout_pkeep = 0.8    # some dropout
 
 # load the stories to train and validate an author.
-stories_dir = "oster/*"
+stories_dir = "../../test/trainingset/The_Detective_Store/*.wpml"
 
 
 # Read the the text files. Each text files is assumed to be a book.
@@ -128,13 +128,13 @@ summaries = tf.summary.merge([loss_summary, acc_summary])
 # folder at each run named 'log/<timestamp>/'. Two sets of data are saved so that
 # you can compare training and validation curves visually in Tensorboard.
 timestamp = str(math.trunc(time.time()))
-summary_writer = tf.summary.FileWriter("log/" + timestamp + "-training")
-validation_writer = tf.summary.FileWriter("log/" + timestamp + "-validation")
+summary_writer = tf.summary.FileWriter("../../test/log/" + timestamp + "-training")
+validation_writer = tf.summary.FileWriter("../../test/log/" + timestamp + "-validation")
 
 # Init for saving models. They will be saved into a directory named 'checkpoints'.
 # Only the last checkpoint is kept.
-if not os.path.exists("checkpoints"):
-    os.mkdir("checkpoints")
+if not os.path.exists("../../test/checkpoints"):
+    os.mkdir("../../test/checkpoints")
 saver = tf.train.Saver(max_to_keep=1000)
 
 # for display: init the progress bar
