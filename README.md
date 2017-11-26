@@ -2,15 +2,15 @@
 
 wordsum-model-syntax is wordsum's modified Shakespeare algorithm by Martin Gorner to train a model of a book's syntax. 
 
-This will allow wordsum to parse text into wordsum's text model. 
+This tool will create a model of a book's syntax allowing another tool called wordsum-parse-syntax to use the model to create a regex to parse dialog from narrative in the book. 
 
 This is a work in progress like all of wordsum.
 
 ## Local Setup on MacOS with Python3 and virtualenv (it works on one machine):
 
-1. git clone <source>
+1. git clone https://github.com/wordsum/wordsum-model-syntax.git
 
-2. cd <source>
+2. cd wordsum-model-syntax
 
 3. (if not installed) sudo easy_install pip
 
