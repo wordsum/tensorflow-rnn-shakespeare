@@ -8,3 +8,4 @@ oster
 # Files
 pip-selfcheck.json
 *.zip
+.DS_Store
