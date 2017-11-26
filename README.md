@@ -34,9 +34,9 @@ This is a work in progress like all of wordsum.
 
 ## Local Setup on Ubuntu with Python3 and virtualenv (it works on one machine):
 
-1. git clone <source>
+1. git clone https://github.com/wordsum/wordsum-model-syntax.git
 
-2. cd <source>
+2. cd wordsum-model-syntax
 
 3. (if pip and virtualenv not installed) sudo apt-get install python3-pip python3-dev python-virtualenv
 

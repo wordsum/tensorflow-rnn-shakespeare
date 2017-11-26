@@ -20,7 +20,7 @@ import os
 import time
 import math
 import numpy as np
-import txtutils as txt
+import  wordsum.utils.txtutils as txt
 
 # set to initilize some psuedorandom state.
 # Read for some more detail https://en.wikipedia.org/wiki/Random_seed

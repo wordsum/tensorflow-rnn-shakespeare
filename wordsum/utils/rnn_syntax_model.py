@@ -15,7 +15,7 @@
 
 import tensorflow as tf
 import numpy as np
-import txtutils as txt
+import wordsum.utils.txtutils as txt
 
 # these must match what was saved !
 ALPHASIZE = txt.ALPHASIZE

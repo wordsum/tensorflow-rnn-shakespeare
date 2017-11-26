@@ -15,7 +15,7 @@
 
 import numpy as np
 import unittest
-import my_txtutils as txt
+import wordsum.utils.txtutils as txt
 
 TST_TXTSIZE = 10000
 TST_SEQLEN = 10
