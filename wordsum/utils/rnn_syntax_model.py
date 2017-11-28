@@ -22,21 +22,14 @@ ALPHASIZE = txt.ALPHASIZE
 NLAYERS = 3
 INTERNALSIZE = 512
 
-# A list of constant like variables.
-trained_author_checkpoint1 = ""
-trained_author_checkpoint2 = ""
-trained_author_checkpoint3 = ""
-trained_author_checkpoint4 = ""
-trained_author_checkpoint5 = ""
-trained_author_checkpoint6 = ""
 
-
-author = trained_author_checkpoint6
+saver = "./../../test/checkpoints/rnn_train_1511822955-0.meta"
+checkpoint = "./../../test/checkpoints/rnn_train_1511822955-6000000"
 
 ncnt = 0
 with tf.Session() as sess:
-    new_saver = tf.train.import_meta_graph('checkpoints/rnn_train_1495455686-0.meta')
-    new_saver.restore(sess, author)
+    new_saver = tf.train.import_meta_graph(saver)
+    new_saver.restore(sess, checkpoint)
     # This is used in conjunction with the ord value 'K' set in rnn_train.py
     x = txt.convert_from_alphabet(ord("L"))
     x = np.array([[x]])  # shape [BATCHSIZE, SEQLEN] with BATCHSIZE=1 and SEQLEN=1
