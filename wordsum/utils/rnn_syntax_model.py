@@ -37,7 +37,7 @@ def train(saver = None, checkpoint = None):
         # initial values
         y = x
         h = np.zeros([1, INTERNALSIZE * NLAYERS], dtype=np.float32)  # [ BATCHSIZE, INTERNALSIZE * NLAYERS]
-        for i in range(1000000000):
+        for i in range(15000):
             yo, h = sess.run(['Yo:0', 'H:0'], feed_dict={'X:0': y, 'pkeep:0': 1., 'Hin:0': h, 'batchsize:0': 1})
 
             # If sampling is be done from the topn most likely characters, the generated text
