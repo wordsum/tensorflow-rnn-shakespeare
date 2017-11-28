@@ -55,6 +55,6 @@ def train(saver = None, checkpoint = None):
                 ncnt = 0
             else:
                 ncnt += 1
-            if ncnt == 100:
+            if ncnt == 1000:
                 print("")
                 ncnt = 0
