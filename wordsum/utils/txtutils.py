@@ -35,6 +35,11 @@ import sys
 ALPHASIZE = 98
 
 
+
+# The purpose of this function is to convert the alphabet
+# to its numerical representation creating a number in the range from
+# 1 to 96 (Why?)
+#
 # Specification of the supported alphabet (subset of ASCII-7)
 # 10 line feed LF
 # 32-64 numbers and punctuation
@@ -78,7 +83,7 @@ def convert_to_alphabet(c, avoid_tab_and_lf=False):
     else:
         return 0  # unknown
 
-
+# This takes a string and encodes 
 def encode_text(s):
     """Encode a string.
     :param s: a text string
